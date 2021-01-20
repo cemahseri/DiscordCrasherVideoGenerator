@@ -8,3 +8,8 @@ Or alternatively, you can specify the path of your input and/or output file from
 DiscordCrasherVideoGenerator.exe C:\path\to\your\mom\input.mp4
 DiscordCrasherVideoGenerator.exe C:\path\to\your\mom\input.mp4 C:\path\to\your\mom\output.mp4
 ```
+
+# Notice
+Be sure that you have installed .NET 5 runtime.
+Don't use a video that's too short. Like, use 8 or 9 seconds at least.
+Also, be sure that the file's name is full of alphanumeric letters. Don't put any space, special character, number, etc.
