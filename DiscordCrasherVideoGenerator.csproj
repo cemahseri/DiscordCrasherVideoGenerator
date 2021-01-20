@@ -11,4 +11,10 @@
     <AssemblyName>DiscordCrasherVideoGenerator</AssemblyName>
     <RootNamespace>DiscordCrasherVideoGenerator</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="LICENSE" />
+    <None Remove="README.md" />
+  </ItemGroup>
 </Project>
