@@ -13,9 +13,6 @@ Just install it from your package manager.
 ### macOS
 If you really use macOS, go fuck yourself. Haha, just kidding. Just download [macOS 64-bit installer](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-5.0.8-macos-x64-installer). And seriously, go fuck yourself.
 
-Don't use a video that's too short. Like, use 8 or 9 seconds at least.
-Also, be sure that the file's name is full of alphanumeric letters. Don't put any space, special character, number, etc.
-
 # Usage
 Just drag-and-drop the video you want to make crasher, to the executable file.
 Or alternatively, you can specify the path of your input and/or output file from the command line.
