@@ -1,5 +1,7 @@
 # DiscordCrasherVideoGenerator
-You see those crasher videos going around, such as Trava_discord.mp4, Indian tech support saying "Your computer has virus" or Mario saying "Hmm. Oh! Nice computer you got here. Can I have it?". You want to make one? Great. Keep reading.
+~~You see those crasher videos going around, such as Trava_discord.mp4, Indian tech support saying "Your computer has virus" or Mario saying "Hmm. Oh! Nice computer you got here. Can I have it?". You want to make one? Great. Keep reading.~~
+
+Discord has patched crasher videos.
 
 # Prerequirement
 Be sure that you have installed .NET 5 runtime.
@@ -23,10 +25,15 @@ DiscordCrasherVideoGenerator.exe C:\path\to\your\mom\input.mp4 C:\path\to\your\m
 
 # How this black magic works?
 First of all, this is not something directly related to Discord. Discord's desktop application is developed with Electron, which uses Chromium for rendering engine.
-Chromium's video playback is really awful. Actually it's the problem. If you download those old crasher videos and play it on your VLC or FFplay, you will notice that it'll be played just fine.
-So, why Chromium fails to play the video? If you remember, we just divided our video into two parts. First part was from 0 second to 0.1 second. The second part was the rest. And as you will remember, we changed second part's pixel format to YUV444p. Then we just combine them.
-When Chromium opens the video, it only checks for the first part.  It's YUV420p, which your CPU and GPU can decode. Then Chromium decides to decode the video on your hardware. But after 0.1 second, YUV444p part stars. Chromium doesn't support changing resolution or pixel format while playing the video. So this is the first killer.
-Second bad thing is, it's really high likely that your hardware doesn't support decoding YUV444p. But Chromium decided to decode the video on your hardware anyways. So Chromium fails to decode the video, which results in freezing the whole Discord desktop application.
+Chromium's video playback feature is really awful. If you download those old crasher videos and play it on your VLC or FFplay, you will notice that the media player will play it just fine.
+
+So, why Chromium fails to play the video? There are 2 mains problems which we are abusing. If you remember, we just splitted our video into two parts. First part's pixel format was YUV420p and it was from 0 second to 0.1 second. The second part's pixel format was YUV444p and it was the rest of the video. Then we combined them into one video.
+
+When Chromium opens the video, it only checks for the first part. In our case, it's pixel format is YUV420p and your CPU and/or GPU can decode it. Then Chromium decides to decode the video on your hardware, since it's enabled by default. But after 0.1 second, the second part starts and forces changing pixel format to YUV444p. Chromium doesn't support changing pixel format or resolution while playing the video. So this is the first killer.
+
+Second problem is, it's really high likely that your hardware doesn't support decoding YUV444p. But since Chromium decided to decode the video on your hardware, Chromium fails to decode the video, which results in freezing the whole Discord desktop application.
 
 # How can I avoid crasher videos?
-Open Discord, go to User Settings, then navigate to Advanced. You will see an option named "Hardware Acceleration". Disable it and restart your Discord. Now, all of the videos you watch will be decoded by the software. Ta daah! Now you have a talisman for black sorcery!
+~~Open Discord, go to User Settings, then navigate to Advanced. You will see an option named "Hardware Acceleration". Disable it and restart your Discord. Now, all of the videos you watch will be decoded by the software. Ta daah! Now you have a talisman for black sorcery!~~
+
+Don't worry, Discord has patched crasher videos. You are safe. At least for now...
