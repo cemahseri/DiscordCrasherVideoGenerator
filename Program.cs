@@ -80,11 +80,12 @@ namespace DiscordCrasherVideoGenerator
             {
                 StartInfo =
                 {
+                    FileName = "ffmpeg.exe",
+                    Arguments = command,
+
                     UseShellExecute = false,
                     CreateNoWindow = true, // For hiding the window that's going to be created.
-                    WindowStyle = ProcessWindowStyle.Hidden, // For hiding the window that's going to be created.
-                    FileName = "ffmpeg.exe",
-                    Arguments = command
+                    WindowStyle = ProcessWindowStyle.Hidden // For hiding the window that's going to be created.
                 }
             };
 
