@@ -3,6 +3,8 @@
 
 Discord has patched crasher videos.
 
+**Update:** However! There is still one way to break Discord compeletely and turning off hardware acceleration doesn't help at all. When I find some free time, I will update this program accordingly.
+
 # Prerequirement
 Be sure that you have installed .NET 5 runtime.
 
@@ -37,3 +39,8 @@ Second problem is, it's really high likely that your hardware doesn't support de
 ~~Open Discord, go to User Settings, then navigate to Advanced. You will see an option named "Hardware Acceleration". Disable it and restart your Discord. Now, all of the videos you watch will be decoded by the software. Ta daah! Now you have a talisman for black sorcery!~~
 
 Don't worry, Discord has patched crasher videos. You are safe. At least for now...
+
+
+# To-Do
+- Update to .NET 6.0.
+- Update to the only known remaining Discord video crasher method.
